@@ -33,10 +33,10 @@ const SidePanel = ({ isOpen, closePanel }) => {
       <Link to="/profile">
         <PanelItem>Profile</PanelItem>
       </Link>
-      <Link to="/upload-books">
+      <Link to="/Docupload">
         <PanelItem>Upload Books</PanelItem>
       </Link>
-      <Link to="/sell-books">
+      <Link to="/Transact">
         <PanelItem>Sell Books</PanelItem>
       </Link>
       <Link to="/buy-supplies">

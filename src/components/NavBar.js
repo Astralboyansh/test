@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import SidePanel from "./SidePanel"; // Import the SidePanel component
-
+import { Link } from "react-router-dom";
 const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -73,24 +73,30 @@ const NavBar = () => {
       <SidePanel isOpen={isPanelOpen} closePanel={closePanel} />
       <SearchBar placeholder="Search..." />
       <NavbarSections>
-        <NavItem
+          <Link to="/HomePage">
+          <NavItem
           onClick={() => handleItemClick("home")}
-          className={activeItem === "home" ? "active" : ""}
-        >
+          className={activeItem === "home" ? "active" : ""}>
           Home
         </NavItem>
+        </Link>
+        <Link to="/VideoPlayer">
         <NavItem
           onClick={() => handleItemClick("video")}
           className={activeItem === "video" ? "active" : ""}
         >
           Video Library
         </NavItem>
+        </Link>
+
+        <Link to="/PdfDownload">
         <NavItem
           onClick={() => handleItemClick("pdf")}
           className={activeItem === "pdf" ? "active" : ""}
         >
           PDF Library
         </NavItem>
+        </Link>
         <NavItem
           onClick={() => handleItemClick("kitaab")}
           className={activeItem === "kitaab" ? "active" : ""}
